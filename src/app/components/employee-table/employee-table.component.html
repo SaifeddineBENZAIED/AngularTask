@@ -1,0 +1,54 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4 text-primary">Liste des Employés</h2>
+
+  <!-- Table Bootstrap -->
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th (click)="sort('id')">ID <span *ngIf="sortColumn === 'id'">{{ sortDirection ? '▲' : '▼' }}</span></th>
+          <th (click)="sort('firstName')">Prénom <span *ngIf="sortColumn === 'firstName'">{{ sortDirection ? '▲' : '▼' }}</span></th>
+          <th (click)="sort('lastName')">Nom <span *ngIf="sortColumn === 'lastName'">{{ sortDirection ? '▲' : '▼' }}</span></th>
+          <th (click)="sort('age')">Âge <span *ngIf="sortColumn === 'age'">{{ sortDirection ? '▲' : '▼' }}</span></th>
+          <th>Email</th>
+          <th (click)="sort('salary')">Salaire <span *ngIf="sortColumn === 'salary'">{{ sortDirection ? '▲' : '▼' }}</span></th>
+          <th>Adresse</th>
+          <th>Téléphone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of displayedEmployees">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.firstName }}</td>
+          <td>{{ employee.lastName }}</td>
+          <td>{{ employee.age }}</td>
+          <td>{{ employee.email }}</td>
+          <td>{{ employee.salary }} €</td>
+          <td>{{ employee.address }}</td>
+          <td>{{ employee.contactNumber }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pagination Bootstrap -->
+  <nav>
+    <ul class="pagination justify-content-center">
+      <!-- Précédent -->
+      <li class="page-item" [class.disabled]="currentPage === 1" (click)="changePage(currentPage - 1)">
+        <a class="page-link" href="#">Précédent</a>
+      </li>
+
+      <!-- Pages visibles -->
+      <li *ngFor="let page of getVisiblePages()" class="page-item" [class.active]="currentPage === page"
+          (click)="changePage(page)">
+        <a class="page-link" href="#">{{ page }}</a>
+      </li>
+
+      <!-- Suivant -->
+      <li class="page-item" [class.disabled]="currentPage === getTotalPages()" (click)="changePage(currentPage + 1)">
+        <a class="page-link" href="#">Suivant</a>
+      </li>
+    </ul>
+  </nav>
+</div>
