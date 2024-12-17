@@ -29,3 +29,41 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # AngularTask
 >>>>>>> 50e5593bf349048a10d8fb706b410158ae68f755
+
+
+
+---
+
+## **2. README - Version sans Angular Material**
+
+**Fichier : `README_Sans_Angular_Material.md`**
+
+```markdown
+# Test Technique - Application Angular Niveau 1 (Version sans Angular Material)
+
+## Versions utilisées :
+- **Node.js** : v20.16.0
+- **npm** : v10.2.0
+- **Framework** : Angular v18.1.0
+- **UI Library** : Bootstrap v5.3.3
+
+## Fonctionnalités :
+1. **Pagination** : 
+   - 10 éléments par page par défaut.
+   - Navigation avec "Précédent" et "Suivant" désactivés aux extrémités.
+   - Limite d'affichage : 3 numéros de pages visibles à la fois.
+2. **Tri** : 
+   - Fonctionnalité de tri sur plusieurs colonnes : **ID, Prénom, Nom, Âge, Salaire**.
+   - Tri interactif (ascendant/descendant) en cliquant sur l'en-tête des colonnes.
+3. **Design** :
+   - Utilisation de **Bootstrap** pour un design moderne et interactif.
+   - Tableaux stylisés et responsive pour tous les appareils.
+4. **Accessibilité** : Déploiement de la page sur GitHub Pages. (via :
+    -code source : https://github.com/SaifeddineBENZAIED/AngularTask
+    -template :  https://saifeddinebenzaied.github.io/AngularTask/
+    )
+
+## Instructions pour exécuter le projet :
+1. **Cloner le projet** :
+   ```bash
+   git clone https://github.com/VOTRE_GITHUB/bootstrap-employee-app.git
