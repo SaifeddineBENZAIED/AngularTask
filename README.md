@@ -66,4 +66,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Instructions pour exécuter le projet :
 1. **Cloner le projet** :
    ```bash
-   git clone https://github.com/VOTRE_GITHUB/bootstrap-employee-app.git
+   git clone https://github.com/SaifeddineBENZAIED/AngularTask.git
